@@ -187,10 +187,6 @@
 						content for Hack Club's social media.
 					</p>
 				</div>
-
-				<div class="button">
-					<a id="applyButton" href="https://example.com">Apply Now (x days remaining)</a>
-				</div>
 			</div>
 		</div>
 

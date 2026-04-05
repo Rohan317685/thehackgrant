@@ -125,7 +125,6 @@ body {
 	overflow-wrap: anywhere;
 	font-size: clamp(16px, 3vh, 35px);
 	text-align: center;
-	padding-bottom: 10vh;
 }
 
 #applyButton {
