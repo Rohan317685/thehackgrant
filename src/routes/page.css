@@ -16,7 +16,7 @@
 .carousel-viewport {
 	--carousel-gap: 20px;
 	--card-width: auto;
-	--card-height: 15vh;
+	--card-height: clamp(100px, 15vh, 1000px);
 
 	width: 100%;
 	height: calc(var(--card-height) + 20px);
@@ -83,7 +83,7 @@
 }
 
 #title {
-	font-size: clamp(18px, 6vh, 75px);
+	font-size: clamp(24px, 6vh, 75px);
 	color: var(--color-text-muted);
 	font-weight: bold;
 	font-family: 'Young Serif';
@@ -93,9 +93,9 @@
 #body {
 	max-width: 40ch;
 	overflow-wrap: anywhere;
-	font-size: clamp(14px, 3vh, 35px);
+	font-size: clamp(16px, 3vh, 35px);
 	text-align: center;
-	padding-bottom: 75px;
+	padding-bottom: 10vh;
 }
 
 #applyButton {
