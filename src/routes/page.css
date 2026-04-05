@@ -1,123 +1,124 @@
 .carousel-page {
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 0 36px;
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 0 36px;
 }
 
 .carousel-top {
-  margin-bottom: 28px;
+	margin-bottom: 28px;
 }
 
 .carousel-bottom {
-  margin-top: auto;
+	margin-top: auto;
 }
 
 .carousel-viewport {
-  --carousel-gap: 20px;
-  --card-width: 300px;
-  --card-height: 200px;
+	--carousel-gap: 20px;
+	--card-width: 300px;
+	--card-height: 200px;
 
-  width: 100%;
-  height: calc(var(--card-height) + 20px); 
-  overflow: hidden;
-  position: relative;
-  background: var(--color-bg);
-  padding: 10px 0;
-
+	width: 100%;
+	height: calc(var(--card-height) + 20px);
+	overflow: hidden;
+	position: relative;
+	background: var(--color-bg);
+	padding: 10px 0;
 }
 
 .teleport-strip {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  display: flex;
-  width: max-content;
-  gap: var(--carousel-gap);
-  padding-right: var(--carousel-gap);
-  box-sizing: border-box; 
-  will-change: transform;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	display: flex;
+	width: max-content;
+	gap: var(--carousel-gap);
+	padding-right: var(--carousel-gap);
+	box-sizing: border-box;
+	will-change: transform;
 }
 
 .image-card {
-  flex: 0 0 var(--card-width);
-  width: var(--card-width);
-  height: var(--card-height);
-  overflow: hidden;
-  /* border-radius: 8px; */
+	flex: 0 0 var(--card-width);
+	width: var(--card-width);
+	height: var(--card-height);
+	overflow: hidden;
+	/* border-radius: 8px; */
 }
 
 .image-card img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  user-select: none;
-  pointer-events: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	user-select: none;
+	pointer-events: none;
 }
 
 @media (max-width: 640px) {
-  .carousel-top {
-    margin-bottom: 20px;
-  }
+	.carousel-top {
+		margin-bottom: 20px;
+	}
 
-  .carousel-viewport {
-    --card-width: 240px;
-    --card-height: 160px;
-  }
+	.carousel-viewport {
+		--card-width: 240px;
+		--card-height: 160px;
+	}
 }
 
 .text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: Glyseric;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: Glyseric;
 }
 
 .button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: "Glyseric";
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Glyseric';
 }
 
 #title {
-  font-size: 75px;
-  color: var(--color-text-muted);
-  font-weight: bold;
-  font-family: "Young Serif";
-  text-align: center;
+	font-size: 75px;
+	color: var(--color-text-muted);
+	font-weight: bold;
+	font-family: 'Young Serif';
+	text-align: center;
 }
 
 #body {
-  max-width: 40ch;
-  overflow-wrap: anywhere;
-  font-size: 35px;
-  text-align: center;
-  padding-bottom: 75px;
+	max-width: 40ch;
+	overflow-wrap: anywhere;
+	font-size: 35px;
+	text-align: center;
+	padding-bottom: 75px;
 }
 
 #applyButton {
-  font-size: 25px;
-  background-color: var(--color-bg);
-  border-radius: 999999px;
-  border-width: 2px;
-  padding: 6px 16px;
-  transition: background-color 0.5s, color 0.5s;
-  border-color: #ffffff;
+	font-size: 25px;
+	background-color: var(--color-bg);
+	border-radius: 999999px;
+	border-width: 2px;
+	padding: 6px 16px;
+	transition:
+		background-color 0.5s,
+		color 0.5s;
+	border-color: #ffffff;
 }
 
 #applyButton:hover {
-  color: var(--color-bg);
-  background-color: #ffffff;
-  border-color: #ffffff;
+	color: var(--color-bg);
+	background-color: #ffffff;
+	border-color: #ffffff;
 }
 
 .hero {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
