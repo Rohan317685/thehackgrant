@@ -1,3 +1,27 @@
+*::-webkit-scrollbar {
+	width: 0 !important;
+	height: 0 !important;
+	display: none !important;
+}
+*::-webkit-scrollbar-thumb {
+	background: transparent !important;
+}
+*::-webkit-scrollbar-track {
+	background: transparent !important;
+}
+
+html, body {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
 .hero-scroll-container {
 	height: 400vh;
 }
