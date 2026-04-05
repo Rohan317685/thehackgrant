@@ -19,7 +19,7 @@
   --card-height: 200px;
 
   width: 100%;
-  height: calc(var(--card-height) + 20px);
+  height: calc(var(--card-height) + 20px); 
   overflow: hidden;
   position: relative;
   background: var(--color-bg);
@@ -34,7 +34,7 @@
   width: max-content;
   gap: var(--carousel-gap);
   padding-right: var(--carousel-gap);
-  box-sizing: border-box;
+  box-sizing: border-box; 
   will-change: transform;
 }
 
@@ -43,7 +43,7 @@
   width: var(--card-width);
   height: var(--card-height);
   overflow: hidden;
-  border-radius: 8px;
+  /* border-radius: 8px; */
 }
 
 .image-card img {
@@ -64,4 +64,50 @@
     --card-width: 240px;
     --card-height: 160px;
   }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Glyseric;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Glyseric";
+}
+
+#title {
+  font-size: 75px;
+  color: var(--color-text-muted);
+  font-weight: bold;
+  font-family: "Young Serif";
+}
+
+#body {
+  max-width: 40ch;
+  overflow-wrap: anywhere;
+  font-size: 35px;
+  text-align: center;
+  padding-bottom: 125px;
+}
+
+#applyButton {
+  font-size: 25px;
+  background-color: var(--color-bg-card);
+  border-radius: 50px;
+  border-width: 2px;
+  padding: 15px;
+  transition: background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+#applyButton:hover {
+  color: var(--color-bg-card);
+  background-color: #ffffff;
 }

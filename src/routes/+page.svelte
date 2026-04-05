@@ -124,6 +124,13 @@
     </div>
   </div>
 
+  <div class="text">
+    <h1 id="title">tell our stories.</h1>
+    <p id="body">Hack Club is hiring 2 teenagers for a paid gap year to create videos, films, and other content for Hack Club's social media.</p> 
+  </div>
+
+  <div class="button"><a id="applyButton" href="https://example.com">Apply Now (x days remaining)</a></div>
+
   <div class="carousel-viewport carousel-bottom">
     <div class="teleport-strip" bind:this={bottomStripA}>
       {#each stripImages as src, index (`bottom-a-${index}`)}
