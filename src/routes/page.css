@@ -22,7 +22,7 @@
 .carousel-viewport {
 	--carousel-gap: 20px;
 	--card-width: auto;
-	--card-height: clamp(100px, 15vh, 1000px);
+	--card-height: clamp(100px, 15dvh, 1000px);
 
 	width: 100%;
 	height: calc(var(--card-height) + 20px);
