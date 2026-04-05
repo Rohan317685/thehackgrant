@@ -207,9 +207,10 @@
 
 		<div class="typing-overlay">
 			<p class="typing-text">
-				{#each TYPING_TEXT.split(' ') as word, i (i)}
-					<span class="typing-word">{word} </span>
-				{/each}
+				<!-- eslint-disable svelte/no-useless-mustaches -->
+				{#each TYPING_TEXT.split(' ') as word, i (i)}<span class="typing-word">{word}</span
+					>{' '}{/each}
+				<!-- eslint-enable svelte/no-useless-mustaches -->
 			</p>
 		</div>
 	</div>
