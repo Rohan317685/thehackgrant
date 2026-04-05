@@ -207,8 +207,8 @@
 
 		<div class="typing-overlay">
 			<p class="typing-text">
-				{#each TYPING_TEXT.split(' ') as word}
-					<span class="typing-word">{word}{' '}</span>
+				{#each TYPING_TEXT.split(' ') as word, i (i)}
+					<span class="typing-word">{word} </span>
 				{/each}
 			</p>
 		</div>
