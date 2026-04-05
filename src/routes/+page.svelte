@@ -142,8 +142,14 @@
 
 			// Top carousel slides up, bottom carousel fades out: progress 0.85→1.0
 			const carouselProgress = Math.max(0, Math.min(1, (progress - 0.85) / 0.15));
-			if (carouselTop) carouselTop.style.transform = `translateY(${-carouselProgress * 110}%)`;
-			if (carouselBottom) carouselBottom.style.opacity = String(1 - carouselProgress);
+			if (carouselTop) {
+        carouselTop.style.transform = `translateY(${-carouselProgress * 110}%)`;
+        carouselTop.style.opacity = String(1 - carouselProgress);
+      }
+			if (carouselBottom) {
+        carouselBottom.style.transform = `translateY(${carouselProgress * 100}%)`;
+        carouselBottom.style.opacity = String(1 - carouselProgress);
+      }
 		};
 
 		window.addEventListener('scroll', onScroll, { passive: true });
