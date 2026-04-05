@@ -105,95 +105,123 @@
 		};
 	});
 
+	const TYPING_TEXT =
+		"Hack Club is an international nonprofit organization of teenagers who code together. We're also a community, run by teenagers for teenagers, full of amazing people and amazing stories--and we're looking for you to tell them.";
+
+	let heroScrollContainer: HTMLDivElement | undefined;
+
 	onMount(() => {
-		const fadeEls = document.querySelectorAll<HTMLElement>('.fade-in');
-		fadeEls.forEach((el, i) => {
-			el.style.setProperty('--fade-delay', `${i * 0.15}s`);
-		});
+		if (!heroScrollContainer) return;
 
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						(entry.target as HTMLElement).classList.add('visible');
-						observer.unobserve(entry.target);
-					}
-				});
-			},
-			{ threshold: 0.2 }
-		);
+		const heroEl = heroScrollContainer.querySelector<HTMLElement>('.hero');
+		const carouselTop = heroScrollContainer.querySelector<HTMLElement>('.carousel-top');
+		const carouselBottom = heroScrollContainer.querySelector<HTMLElement>('.carousel-bottom');
+		const typingWordEls = heroScrollContainer.querySelectorAll<HTMLSpanElement>('.typing-word');
+		const total = typingWordEls.length;
 
-		fadeEls.forEach((el) => observer.observe(el));
+		const onScroll = () => {
+			if (!heroScrollContainer) return;
+			const rect = heroScrollContainer.getBoundingClientRect();
+			const scrollableHeight = rect.height - window.innerHeight;
+			const progress = Math.max(0, Math.min(1, -rect.top / scrollableHeight));
 
-		return () => observer.disconnect();
+			// Hero text fades out: progress 0.2→0.38
+			const heroFade = Math.max(0, Math.min(1, (progress - 0.2) / 0.18));
+			if (heroEl) heroEl.style.opacity = String(1 - heroFade);
+
+			// Words type in: progress 0.38→0.8 (carousels still visible as backdrop)
+			const wordProgress = Math.max(0, Math.min(1, (progress - 0.38) / 0.42));
+			const fadeWindow = 3 / total;
+
+			typingWordEls.forEach((word, i) => {
+				const start = i / total;
+				const wp = Math.max(0, Math.min(1, (wordProgress - start) / fadeWindow));
+				word.style.opacity = String(wp);
+				word.style.top = `${(1 - wp) * 10}px`;
+			});
+
+			// Carousels slide off only after typing is done: progress 0.8→1.0
+			const carouselProgress = Math.max(0, Math.min(1, (progress - 0.8) / 0.2));
+			if (carouselTop) carouselTop.style.transform = `translateY(${-carouselProgress * 110}%)`;
+			if (carouselBottom) carouselBottom.style.transform = `translateY(${carouselProgress * 110}%)`;
+		};
+
+		window.addEventListener('scroll', onScroll, { passive: true });
+		onScroll();
+
+		return () => window.removeEventListener('scroll', onScroll);
 	});
 </script>
 
-<div class="carousel-page">
-	<div class="carousel-viewport carousel-top">
-		<div class="teleport-strip" bind:this={topStripA}>
-			{#each stripImages as src, index (`top-a-${index}`)}
-				<div class="image-card">
-					<img {src} alt="Carousel item" draggable="false" />
-				</div>
-			{/each}
-		</div>
-		<div class="teleport-strip" bind:this={topStripB} aria-hidden="true">
-			{#each stripImages as src, index (`top-b-${index}`)}
-				<div class="image-card">
-					<img {src} alt="Carousel item" draggable="false" />
-				</div>
-			{/each}
-		</div>
-	</div>
-
-	<div class="herocontainer">
-		<div class="hero">
-			<div class="text">
-				<h1 id="title">tell our stories.</h1>
-				<p id="body">
-					Hack Club is hiring 2 teenagers for a paid gap year to create videos, films, and other
-					content for Hack Club's social media.
-				</p>
+<div class="hero-scroll-container" bind:this={heroScrollContainer}>
+	<div class="carousel-page">
+		<div class="carousel-viewport carousel-top">
+			<div class="teleport-strip" bind:this={topStripA}>
+				{#each stripImages as src, index (`top-a-${index}`)}
+					<div class="image-card">
+						<img {src} alt="Carousel item" draggable="false" />
+					</div>
+				{/each}
 			</div>
-
-			<div class="button">
-				<a id="applyButton" href="https://example.com">Apply Now (x days remaining)</a>
+			<div class="teleport-strip" bind:this={topStripB} aria-hidden="true">
+				{#each stripImages as src, index (`top-b-${index}`)}
+					<div class="image-card">
+						<img {src} alt="Carousel item" draggable="false" />
+					</div>
+				{/each}
 			</div>
 		</div>
-	</div>
 
-	<div class="carousel-viewport carousel-bottom">
-		<div class="teleport-strip" bind:this={bottomStripA}>
-			{#each stripImages as src, index (`bottom-a-${index}`)}
-				<div class="image-card">
-					<img {src} alt="Carousel item" draggable="false" />
+		<div class="herocontainer">
+			<div class="hero">
+				<div class="text">
+					<h1 id="title">tell our stories.</h1>
+					<p id="body">
+						Hack Club is hiring 2 teenagers for a paid gap year to create videos, films, and other
+						content for Hack Club's social media.
+					</p>
 				</div>
-			{/each}
+
+				<div class="button">
+					<a id="applyButton" href="https://example.com">Apply Now (x days remaining)</a>
+				</div>
+			</div>
 		</div>
-		<div class="teleport-strip" bind:this={bottomStripB} aria-hidden="true">
-			{#each stripImages as src, index (`bottom-b-${index}`)}
-				<div class="image-card">
-					<img {src} alt="Carousel item" draggable="false" />
-				</div>
-			{/each}
+
+		<div class="carousel-viewport carousel-bottom">
+			<div class="teleport-strip" bind:this={bottomStripA}>
+				{#each stripImages as src, index (`bottom-a-${index}`)}
+					<div class="image-card">
+						<img {src} alt="Carousel item" draggable="false" />
+					</div>
+				{/each}
+			</div>
+			<div class="teleport-strip" bind:this={bottomStripB} aria-hidden="true">
+				{#each stripImages as src, index (`bottom-b-${index}`)}
+					<div class="image-card">
+						<img {src} alt="Carousel item" draggable="false" />
+					</div>
+				{/each}
+			</div>
+		</div>
+
+		<div class="typing-overlay">
+			<p class="typing-text">
+				{#each TYPING_TEXT.split(' ') as word}
+					<span class="typing-word">{word}{' '}</span>
+				{/each}
+			</p>
 		</div>
 	</div>
 </div>
 
-<section class="second-page">
-	<p class="fade-in">
-		We're looking for two teenagers with a passion for storytelling — photographers, filmmakers,
-		writers, editors, or anyone who knows how to make people feel something.
+<section class="fellowship-section">
+	<h2 class="fellowship-title">Introducing the Hack Club Media Gap Year Fellowship</h2>
+	<p class="fellowship-body">
+		This is a paid full-time in person role. $50k/year + all travel covered + healthcare &
+		benefits. You will be spending time at Hack Club HQ as well as travelling all over the world to
+		different Hack Club events. It's intended to be something you do for a year before you go to
+		college or whatever your plans are after high school, but if you are on an alternate schooling
+		path that works too!
 	</p>
-	<p class="fade-in">
-		You'll spend a year embedded in Hack Club, traveling to hackathons, documenting the moments that
-		make this community unlike anything else.
-	</p>
-	<p class="fade-in">
-		Late nights shipping projects. First solders. The look on someone's face when their code finally
-		works.
-	</p>
-	<p class="fade-in">These are the stories the world doesn't know yet.</p>
-	<p class="fade-in accent">You'll be the one to tell them.</p>
 </section>
