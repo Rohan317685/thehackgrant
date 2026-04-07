@@ -262,7 +262,9 @@
 					/>
 					<h1 id="title">tell our stories.</h1>
 					<p id="body">
-						Hack Club is hiring 2 teenagers to record the stories of the next generation of <strong style="font-weight: 900; color: #ec3750;">hackers</strong>.
+						Hack Club is hiring 2 teenagers to record the stories of the next generation of <strong
+							style="font-weight: 900; color: #ec3750;">hackers</strong
+						>.
 					</p>
 				</div>
 				<p id="scroll-down">Scroll down to read <span id="scroll-down-arrow">↓</span></p>
@@ -375,7 +377,7 @@
 		made with &lt;3 by <u><a href="https://github.com/hellonearth311">hellonearth311</a></u>,
 		<u><a href="https://github.com/sadeshmukh">sadeshmukh</a></u>,
 		<u><a href="https://github.com/maxstellar">maxstellar</a></u>, and
-		<u><a href="https://github.com/astratheboop">astra celestine</a></u>.
+		<u><a href="https://github.com/astra-the-boop">astra celestine</a></u>.
 		<u><a href="https://github.com/hackclub/novella">always OSS</a>.</u>
 	</p>
 </section>
