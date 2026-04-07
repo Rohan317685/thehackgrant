@@ -349,7 +349,7 @@
 		<img
 			class="panel-img right"
 			alt="Collage of Hack Club events"
-			src="https://cdn.hackclub.com/019d6191-88a7-7daa-b4c0-fdcae2fffa38/attend_hc_events.png"
+			src="https://cdn.hackclub.com/019d657c-8346-7a39-acbf-e083a5e26edf/image%20(13).png"
 		/>
 	</div>
 	<div class="hwyd-panel">
