@@ -281,6 +281,9 @@
 					<p id="body">
 						Hack Club is hiring 2 teenagers to record the stories
 						<span class="hero-body-crossfade-wrapper">
+							<span class="hero-body-crossfade hero-body-crossfade-sizer" aria-hidden="true">
+								of the next generation of <strong class="hero-highlight">{HERO_HIGHLIGHT_WORDS.reduce((a, b) => a.length >= b.length ? a : b)}.</strong>
+							</span>
 							{#key heroHighlightWordIndex}
 								<span class="hero-body-crossfade" in:fade={{ duration: 350 }} out:fade={{ duration: 350 }}>
 									of the next generation of <strong class="hero-highlight">{HERO_HIGHLIGHT_WORDS[heroHighlightWordIndex]}.</strong>
@@ -290,7 +293,7 @@
 					</p>
 				</div>
 				<div class="button">
-					<a style="margin-top: 2vh;" id="applyButton" href="https://example.com">Apply Now ({daysUntilDue} days remaining)</a>
+					<a style="margin-top: 2vh;" id="applyButton" href="https://forms.hackclub.com/mediafellowship">Apply Now ({daysUntilDue} days remaining)</a>
 				</div>
 				<p id="scroll-down">Scroll down to read <span id="scroll-down-arrow">↓</span></p>
 			</div>
@@ -343,7 +346,7 @@
 		> Make Hack Club a household name. Reach new audiences and as many teens as you can.
 	</p>
 	<div class="button">
-		<a id="applyButton" href="https://example.com">Apply Now ({daysUntilDue} days remaining)</a>
+		<a id="applyButton" href="https://forms.hackclub.com/mediafellowship">Apply Now ({daysUntilDue} days remaining)</a>
 	</div>
 </section>
 

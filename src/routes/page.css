@@ -147,13 +147,18 @@
 	will-change: opacity;
 }
 
+.hero-body-crossfade-sizer {
+	visibility: hidden;
+	pointer-events: none;
+}
+
 .hero-highlight {
 	font-weight: 900;
 	color: #ec3750;
 }
 
 #applyButton {
-	font-size: clamp(13px, 2.5vw, 25px);
+	font-size: clamp(10px, 2vh, 25px);
 	background-color: var(--color-bg);
 	border-radius: 999999px;
 	border-width: 2px;
