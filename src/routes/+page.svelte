@@ -278,16 +278,14 @@
 						alt="Hack Club flag"
 					/>
 					<h1 id="title">tell our stories.</h1>
-					<p id="body">
-						Hack Club is hiring 2 teenagers to record the stories of the next generation of
-						<strong class="hero-highlight"
-							>{#key heroHighlightWordIndex}<span
-								class="hero-highlight-word"
-								in:fade={{ duration: 350 }}
-								out:fade={{ duration: 350 }}
-							>{HERO_HIGHLIGHT_WORDS[heroHighlightWordIndex]}.</span>{/key}</strong
-						>
-					</p>
+					<div class="hero-body-wrapper">
+						{#key heroHighlightWordIndex}
+							<p id="body" in:fade={{ duration: 350 }} out:fade={{ duration: 350 }}>
+								Hack Club is hiring 2 teenagers to record the stories of the next generation of
+								<strong class="hero-highlight">{HERO_HIGHLIGHT_WORDS[heroHighlightWordIndex]}.</strong>
+							</p>
+						{/key}
+					</div>
 				</div>
 				<div class="button">
 					<a style="margin-top: 2vh;" id="applyButton" href="https://example.com">Apply Now ({daysUntilDue} days remaining)</a>

@@ -130,23 +130,23 @@
 	text-align: center;
 }
 
+.hero-body-wrapper {
+	display: grid;
+}
+
 #body {
+	grid-area: 1 / 1;
 	max-width: 40ch;
 	overflow-wrap: anywhere;
 	font-size: clamp(16px, 3vh, 35px);
 	text-align: center;
 	color: var(--color-text);
+	will-change: opacity;
 }
 
 .hero-highlight {
 	font-weight: 900;
 	color: #ec3750;
-	display: inline-grid;
-}
-
-.hero-highlight-word {
-	grid-area: 1 / 1;
-	will-change: opacity;
 }
 
 #applyButton {
