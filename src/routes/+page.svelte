@@ -271,41 +271,60 @@
 
 		<div class="herocontainer">
 			<div class="hero">
-				<div class="text">
-					<img
-						class="hero-flag"
-						src="https://assets.hackclub.com/flag-standalone-wtransparent.svg"
-						alt="Hack Club flag"
-					/>
-					<h1 id="title">tell our stories.</h1>
-					<p id="body">
-						Hack Club is hiring 2 teenagers to record the stories
-						<span class="hero-body-crossfade-wrapper">
-							<span class="hero-body-crossfade hero-body-crossfade-sizer" aria-hidden="true">
-								of the next generation of <strong class="hero-highlight"
-									>{HERO_HIGHLIGHT_WORDS.reduce((a, b) => (a.length >= b.length ? a : b))}.</strong
-								>
-							</span>
-							{#key heroHighlightWordIndex}
-								<span
-									class="hero-body-crossfade"
-									in:fade={{ duration: 350 }}
-									out:fade={{ duration: 350 }}
-								>
-									of the next generation of <strong class="hero-highlight"
-										>{HERO_HIGHLIGHT_WORDS[heroHighlightWordIndex]}.</strong
-									>
+				<div class="hero-row">
+					<div class="hero-left">
+						<div class="text">
+							<img
+								class="hero-flag"
+								src="https://assets.hackclub.com/flag-standalone-wtransparent.svg"
+								alt="Hack Club flag"
+							/>
+							<h1 id="title">tell our stories.</h1>
+							<p id="body">
+								Hack Club is hiring 2 teenagers to record the stories
+								<span class="hero-body-crossfade-wrapper">
+									<span class="hero-body-crossfade hero-body-crossfade-sizer" aria-hidden="true">
+										of the next generation of <strong class="hero-highlight"
+											>{HERO_HIGHLIGHT_WORDS.reduce((a, b) =>
+												a.length >= b.length ? a : b
+											)}.</strong
+										>
+									</span>
+									{#key heroHighlightWordIndex}
+										<span
+											class="hero-body-crossfade"
+											in:fade={{ duration: 350 }}
+											out:fade={{ duration: 350 }}
+										>
+											of the next generation of <strong class="hero-highlight"
+												>{HERO_HIGHLIGHT_WORDS[heroHighlightWordIndex]}.</strong
+											>
+										</span>
+									{/key}
 								</span>
-							{/key}
-						</span>
-					</p>
-				</div>
-				<div class="button">
-					<a
-						style="margin-top: 2vh;"
-						href="https://forms.hackclub.com/mediafellowship"
-						class="apply-button">Apply Now ({daysUntilDue} days remaining)</a
-					>
+							</p>
+						</div>
+						<div class="button">
+							<a
+								style="margin-top: 2vh;"
+								href="https://forms.hackclub.com/mediafellowship"
+								class="apply-button">Apply Now ({daysUntilDue} days remaining)</a
+							>
+						</div>
+					</div>
+					<figure class="hero-video-figure">
+						<iframe
+							class="hero-video"
+							src="https://www.youtube-nocookie.com/embed/kaEFv7e49mo?autoplay=1&mute=1&controls=0&loop=1&playlist=kaEFv7e49mo&modestbranding=1"
+							title="Hack Club Media"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						></iframe>
+						<figcaption class="hero-video-caption">
+							Hack Club at Undercity, a 4-day hardware hackathon in Github HQ
+						</figcaption>
+					</figure>
 				</div>
 				<p id="scroll-down">Scroll down to read <span id="scroll-down-arrow">↓</span></p>
 			</div>
