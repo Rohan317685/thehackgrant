@@ -416,7 +416,8 @@
 	</div>
 	<p class="hc-body">
 		We are a 501(c)(3) global non-profit organization based in the United States. We create real
-		adventures, online programs, and provide community for technical teenagers! Every year, our community creates thousands of projects, and we ship out thousands of prizes, including grants
+		adventures, online programs, and provide community for technical teenagers! Every year, our
+		community creates thousands of projects, and we ship out thousands of prizes, including grants
 	</p>
 	<section class="videos-body">
 		<h1 class="title">Some videos we've posted before:</h1>
@@ -735,17 +736,17 @@
 		81-2908499)
 	</p>
 	<p>
-  made with &lt;3 by
-  <a href="https://github.com/hellonearth311">hellonearth311</a>,
-  <a href="https://github.com/sadeshmukh">sadeshmukh</a>,
-  <a href="https://github.com/maxstellar">maxstellar</a>,
-  <a href="https://github.com/mntrushmore">rushmore</a>,
-  <a href="https://github.com/astra-the-boop">astra celestine</a>,
-  and <a href="https://github.com/hackclub/novella">always OSS</a>.
-  <br />
-  heavily inspired by
-  <a href="https://manifesto.hackclub.com">manifesto</a>
-  and
-  <a href="https://github.com/techpixel">manitej</a>.
-</p>
+		made with &lt;3 by
+		<a href="https://github.com/hellonearth311">hellonearth311</a>,
+		<a href="https://github.com/sadeshmukh">sadeshmukh</a>,
+		<a href="https://github.com/maxstellar">maxstellar</a>,
+		<a href="https://github.com/mntrushmore">rushmore</a>,
+		<a href="https://github.com/astra-the-boop">astra celestine</a>, and
+		<a href="https://github.com/hackclub/novella">always OSS</a>.
+		<br />
+		heavily inspired by
+		<a href="https://manifesto.hackclub.com">manifesto</a>
+		and
+		<a href="https://github.com/techpixel">manitej</a>.
+	</p>
 </section>
