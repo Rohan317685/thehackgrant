@@ -411,7 +411,8 @@
 		</div>
 	</div>
 	<p class="hc-body">
-		We are a 501(c)(3) global non-profit organization based in the United States. We create real adventures, online programs, and provide community for technical teenagers. [To be continued]
+		We are a 501(c)(3) global non-profit organization based in the United States. We create real
+		adventures, online programs, and provide community for technical teenagers. [To be continued]
 	</p>
 </section>
 
@@ -492,42 +493,111 @@
 	</div>
 	<h2 id="andsomuchmore">and so much more!</h2>
 	<div class="programs-more-grid">
-		<a class="mini-card" href="https://summer.hackclub.com" target="_blank" rel="noopener" style="background-image:url('https://manifesto.hackclub.com/images/summer-of-making.png');background-size:cover;background-position:bottom">
-			<img class="mini-card-logo" src="https://manifesto.hackclub.com/images/som-logo.png" alt="Summer of Making" style="width:60%;height:auto" />
+		<a
+			class="mini-card"
+			href="https://summer.hackclub.com"
+			target="_blank"
+			rel="noopener"
+			style="background-image:url('https://manifesto.hackclub.com/images/summer-of-making.png');background-size:cover;background-position:bottom"
+		>
+			<img
+				class="mini-card-logo"
+				src="https://manifesto.hackclub.com/images/som-logo.png"
+				alt="Summer of Making"
+				style="width:60%;height:auto"
+			/>
 		</a>
 
 		<a class="mini-card" href="https://campfire.hackclub.com" target="_blank" rel="noopener">
-			<img class="mini-card-bg" src="https://manifesto.hackclub.com/images/campfire-bg.png" alt="" />
-			<img class="mini-card-logo" src="https://manifesto.hackclub.com/images/campfire-logo.png" alt="Campfire" style="width:65%;height:auto" />
+			<img
+				class="mini-card-bg"
+				src="https://manifesto.hackclub.com/images/campfire-bg.png"
+				alt=""
+			/>
+			<img
+				class="mini-card-logo"
+				src="https://manifesto.hackclub.com/images/campfire-logo.png"
+				alt="Campfire"
+				style="width:65%;height:auto"
+			/>
 		</a>
 
-		<a class="mini-card" href="https://sleepover.hackclub.com" target="_blank" rel="noopener" style="background-color:#dbdcf7;background-image:url('https://manifesto.hackclub.com/images/sleepover-pattern.png');background-repeat:repeat;background-size:112px">
-			<img class="mini-card-logo" src="https://manifesto.hackclub.com/images/sleepover-logo.png" alt="Sleepover" style="width:60%;height:auto" />
+		<a
+			class="mini-card"
+			href="https://sleepover.hackclub.com"
+			target="_blank"
+			rel="noopener"
+			style="background-color:#dbdcf7;background-image:url('https://manifesto.hackclub.com/images/sleepover-pattern.png');background-repeat:repeat;background-size:112px"
+		>
+			<img
+				class="mini-card-logo"
+				src="https://manifesto.hackclub.com/images/sleepover-logo.png"
+				alt="Sleepover"
+				style="width:60%;height:auto"
+			/>
 		</a>
 
 		<a class="mini-card" href="https://overglade.hackclub.com" target="_blank" rel="noopener">
-			<img class="mini-card-bg" src="https://manifesto.hackclub.com/images/overglade.png" alt="Overglade" />
+			<img
+				class="mini-card-bg"
+				src="https://manifesto.hackclub.com/images/overglade.png"
+				alt="Overglade"
+			/>
 		</a>
 
-		<a class="mini-card" href="https://undercity.hackclub.com" target="_blank" rel="noopener" style="background:#171717">
-			<img class="mini-card-bg" src="https://manifesto.hackclub.com/images/undercity-bg.png" alt="" />
-			<img class="mini-card-logo" src="https://manifesto.hackclub.com/images/undercity-logo.png" alt="Undercity" style="width:65%;height:auto" />
+		<a
+			class="mini-card"
+			href="https://undercity.hackclub.com"
+			target="_blank"
+			rel="noopener"
+			style="background:#171717"
+		>
+			<img
+				class="mini-card-bg"
+				src="https://manifesto.hackclub.com/images/undercity-bg.png"
+				alt=""
+			/>
+			<img
+				class="mini-card-logo"
+				src="https://manifesto.hackclub.com/images/undercity-logo.png"
+				alt="Undercity"
+				style="width:65%;height:auto"
+			/>
 		</a>
 
 		<a class="mini-card" href="https://shiba.hackclub.com" target="_blank" rel="noopener">
 			<img class="mini-card-bg" src="https://manifesto.hackclub.com/images/shiba-bg.png" alt="" />
 			<div class="mini-card-overlay"></div>
-			<img class="mini-card-logo" src="https://manifesto.hackclub.com/images/shiba-logo.png" alt="Shiba Arcade" style="width:308px;max-width:80%;height:auto;opacity:0.8;filter:drop-shadow(0 0 80px white)" />
+			<img
+				class="mini-card-logo"
+				src="https://manifesto.hackclub.com/images/shiba-logo.png"
+				alt="Shiba Arcade"
+				style="width:308px;max-width:80%;height:auto;opacity:0.8;filter:drop-shadow(0 0 80px white)"
+			/>
 		</a>
 
 		<a class="mini-card" href="https://hackpad.hackclub.com" target="_blank" rel="noopener">
 			<img class="mini-card-bg" src="https://manifesto.hackclub.com/images/hackpad-bg.png" alt="" />
-			<img class="mini-card-logo" src="https://manifesto.hackclub.com/images/hackpad-logo.png" alt="Hackpad" style="width:65%;height:auto" />
+			<img
+				class="mini-card-logo"
+				src="https://manifesto.hackclub.com/images/hackpad-logo.png"
+				alt="Hackpad"
+				style="width:65%;height:auto"
+			/>
 		</a>
 
 		<a class="mini-card" href="https://horizons.hackclub.com" target="_blank" rel="noopener">
-			<img class="mini-card-bg" src="https://manifesto.hackclub.com/images/horizons-bg.png" alt="" />
-			<img class="mini-card-logo" src="https://manifesto.hackclub.com/images/horizons-logo.png" alt="Horizons" style="width:100%;height:auto" />
+			<img
+				class="mini-card-bg"
+				src="https://manifesto.hackclub.com/images/horizons-bg.png"
+				alt=""
+			/>
+			<img
+				class="mini-card-logo"
+				src="https://manifesto.hackclub.com/images/horizons-logo.png"
+				alt="Horizons"
+				style="width:100%;height:auto"
+			/>
 		</a>
 	</div>
 </section>
@@ -564,7 +634,7 @@
 		<div class="notes-card-text">
 			<p class="notes-card-title">
 				The plan for hack club world dominance <span class="notes-card-subtitle"
-					>(brief rundown on Hack Club!)</span
+					>(rundown on Hack Club!)</span
 				> →
 			</p>
 			<p class="notes-card-author">Written by Deven, YSWS Lead @ Hack Club</p>
@@ -592,14 +662,11 @@
 		<div class="panel-text left">
 			<h3 class="stitle">Run our social media</h3>
 			<p class="sbody">
-				Be responsible for our social media presence across YouTube, Instagram, TikTok, Twitter, and more. Meet Hack Clubbers and 
+				Be responsible for our social media presence across YouTube, Instagram, TikTok, Twitter, and
+				more. Meet Hack Clubbers and
 			</p>
 		</div>
-		<img
-			class="panel-img right"
-			alt="Collage of Hack Clubbers doing media"
-			src="og.png"
-		/>
+		<img class="panel-img right" alt="Collage of Hack Clubbers doing media" src="og.png" />
 	</div>
 	<div class="hwyd-panel">
 		<img
@@ -628,7 +695,6 @@
 		<div class="button">
 			<a id="linkButton">A note from the designers ↗</a>
 		</div>
-
 	</div>
 </section>
 

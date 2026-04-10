@@ -158,7 +158,7 @@
 }
 
 .apply-button {
-	font-size: clamp(10px, 2vh, 25px);
+	font-size: clamp(10px, 5vw, 25px);
 	background-color: var(--color-bg);
 	border-radius: 999999px;
 	border-width: 2px;
@@ -219,7 +219,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 15vh clamp(1.5rem, 8vw, 12rem);
+	padding: 15vh clamp(1.5rem, 8vw, 12rem) 5vh;
 	background: var(--color-bg);
 }
 
@@ -278,65 +278,6 @@
 
 .right {
 	text-align: right;
-}
-
-@media (max-width: 768px) {
-	.hwyd-section {
-		width: 90vw;
-		gap: 4rem;
-		padding: 2rem 0;
-	}
-
-	.hwyd-panel {
-		flex-direction: column;
-		gap: 1.5rem;
-	}
-
-	.panel-img {
-		max-width: 100%;
-		width: 100%;
-	}
-
-	.panel-text {
-		width: 100%;
-	}
-
-	.left,
-	.right {
-		text-align: center;
-	}
-
-	.hwyd-panel:nth-child(3) .panel-img {
-		order: -1;
-	}
-
-	.carousel-top {
-		margin-bottom: 20px;
-	}
-
-	.carousel-viewport {
-		/*--card-width: 240px;*/
-		--carousel-gap: 8px;
-		--card-height: clamp(80px, 11dvh, 130px);
-	}
-
-	.fellowship-section {
-		padding: 10vh clamp(1rem, 5vw, 2rem);
-	}
-
-	.title {
-		font-size: clamp(1.5rem, 5vw, 2rem);
-		line-height: 1.2;
-	}
-
-	.stitle {
-		font-size: clamp(1.1rem, 4vw, 1.5rem);
-	}
-
-	#title {
-		line-height: 120%;
-		margin-bottom: 2vh;
-	}
 }
 
 .stitle {
@@ -440,28 +381,7 @@ u:hover {
 }
 
 .cta-section .apply-button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: fit-content;
-	padding: 0 clamp(9px, 3vh, 20px);
-	height: clamp(10px, 10vh, 60px);
-	border: 2px solid #fff;
-	border-radius: 9999px;
-	font-size: clamp(10px, 3vh, 25px);
-	font-family: Glyseric, Newsreader, sans-serif;
-	color: #fff;
-	text-decoration: none;
-	transition:
-		background 0.5s,
-		color 0.5s;
-	margin-top: 2vh;
-}
-
-.cta-section .apply-button:hover {
-	color: var(--color-bg);
-	background-color: #ffffff;
-	border-color: #fff;
+	margin-top: 3vh;
 }
 
 .button-container {
@@ -614,6 +534,7 @@ u:hover {
 	color: var(--color-text-dim);
 	font-weight: bold;
 	margin-bottom: -3rem;
+	margin-top: 5vh;
 }
 
 .programs-more {
@@ -757,4 +678,128 @@ u:hover {
 	font-size: 16px;
 	margin: 0;
 	color: #ddd;
+}
+
+@media (max-width: 768px) {
+	/* hwyd */
+	.hwyd-section {
+		width: 90vw;
+		gap: 4rem;
+		padding: 2rem 0;
+	}
+
+	.hwyd-panel {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.panel-img {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.panel-text {
+		width: 100%;
+	}
+
+	.left,
+	.right {
+		text-align: center;
+	}
+
+	.hwyd-panel:nth-child(3) .panel-img {
+		order: -1;
+	}
+
+	/* carousel */
+	.carousel-top {
+		margin-bottom: 20px;
+	}
+
+	.carousel-viewport {
+		--carousel-gap: 8px;
+		--card-height: clamp(80px, 11dvh, 130px);
+	}
+
+	/* fellowship */
+	.fellowship-section {
+		padding: 10vh clamp(1rem, 5vw, 2rem);
+	}
+
+	/* typography */
+	.title {
+		font-size: clamp(1.5rem, 5vw, 2rem);
+		line-height: 1.2;
+	}
+
+	.stitle {
+		font-size: clamp(1.1rem, 4vw, 1.5rem);
+	}
+
+	#title {
+		line-height: 120%;
+		margin-bottom: 2vh;
+	}
+
+	/* past-events */
+	.past-events,
+	.blogs {
+		width: 92vw;
+		gap: 2.5rem;
+	}
+
+	.programs-grid {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	.program-card-img {
+		height: auto;
+		aspect-ratio: 16 / 9;
+	}
+
+	.program-card-desc {
+		font-size: clamp(14px, 4vw, 18px);
+	}
+
+	#andsomuchmore {
+		margin-bottom: -1rem;
+	}
+
+	.programs-more-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 8px;
+	}
+
+	.mini-card {
+		height: auto;
+		aspect-ratio: 2 / 1;
+	}
+
+	/* blogs */
+	.blogs {
+		padding: 0 0 3rem;
+	}
+
+	.notes-card {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.notes-card-photo {
+		width: 100%;
+		height: 200px;
+	}
+
+	.notes-card-text {
+		padding: 1rem 1.25rem 1.25rem;
+	}
+
+	.notes-card-title {
+		font-size: clamp(18px, 5vw, 26px);
+	}
+
+	.notes-card-subtitle {
+		font-size: clamp(14px, 3.5vw, 18px);
+	}
 }
