@@ -435,6 +435,7 @@ u:hover {
 .hack-club-section .title {
 	text-align: center;
 	width: 100%;
+	color: #fff;
 }
 
 .hack-club-section .hc-body {
@@ -802,4 +803,34 @@ u:hover {
 	.notes-card-subtitle {
 		font-size: clamp(14px, 3.5vw, 18px);
 	}
+}
+
+#hack-club {
+	position: relative;
+	color: var(--color-accent);
+	cursor: pointer;
+}
+
+#hack-club::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 5px;
+	width: 100%;
+	height: 3px;
+	background: currentColor;
+	transform: scaleX(1);
+	transform-origin: right;
+	transition: none;
+}
+
+#hack-club:hover::after {
+	animation: underline-flicker 0.9s ease forwards;
+}
+
+@keyframes underline-flicker {
+	0%   { transform: scaleX(1); transform-origin: right; }
+	49%  { transform: scaleX(0); transform-origin: right; }
+	50%  { transform: scaleX(0); transform-origin: left; }
+	100% { transform: scaleX(1); transform-origin: left; }
 }
