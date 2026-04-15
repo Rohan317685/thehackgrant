@@ -462,14 +462,13 @@
 			<div class="video-container">
 				<iframe
 					id="fallout"
-					width="560"
-					height="315"
 					src="https://www.youtube-nocookie.com/embed/SrP2ZeNHm6s?si=kxVdUXMkOMGhsxXS"
 					title="YouTube video player"
 					frameborder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 					referrerpolicy="strict-origin-when-cross-origin"
 					allowfullscreen
+					loading="lazy"
 				></iframe>
 				<p class="videos-subtext">
 					Fallout: An upcoming hardware hackathon taking place in Shenzhen, China this summer!
@@ -478,14 +477,13 @@
 			<div class="video-container">
 				<iframe
 					id="shipwrecked"
-					width="560"
-					height="315"
 					src="https://www.youtube-nocookie.com/embed/uXWMr0gdLJA?si=Vb4hK6MBO0E5RDWB"
 					title="YouTube video player"
 					frameborder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 					referrerpolicy="strict-origin-when-cross-origin"
 					allowfullscreen
+					loading="lazy"
 				></iframe>
 				<p class="videos-subtext">
 					Shipwrecked: A four-day hackathon on a private island we organized last summer!
@@ -501,12 +499,12 @@
 		<a class="program-card" href="https://flagship.hackclub.com" target="_blank" rel="noopener">
 			<img
 				class="program-card-img"
-				src="https://cdn.hackclub.com/019d75da-13a0-755c-9260-3a7a839e6c2b/image.png"
+				src="https://cdn.hackclub.com/019d9226-a5ac-7d49-8361-46f200cd9cf9/cdn.hackclub.com__019d75da-13a0-755c-9260-3a7a839e6c2b__image.png.webp"
 				alt="Campfire Flagship"
 			/>
 			<img
 				class="program-card-logo"
-				src="https://cdn.hackclub.com/019d75d9-1b8c-780a-a990-1c6b65473906/image.png"
+				src="https://cdn.hackclub.com/019d9226-9ff2-7589-9cfd-54493d929d8a/cdn.hackclub.com__019d75d9-1b8c-780a-a990-1c6b65473906__image.png.webp"
 				alt="Campfire Flagship logo"
 			/>
 			<p class="program-card-desc">
@@ -518,13 +516,13 @@
 		<a class="program-card" href="https://midnight.hackclub.com" target="_blank" rel="noopener">
 			<img
 				class="program-card-img"
-				src="https://manifesto.hackclub.com/images/midnight.jpg"
+				src="https://cdn.hackclub.com/019d9226-1711-7159-9392-7dd842277185/manifesto.hackclub.com__images__midnight.jpg.webp"
 				alt="Midnight"
 			/>
 			<div class="midnight-logo">
 				<img
-					class="front"
-					src="https://manifesto.hackclub.com/images/midnight-logo.svg"
+					class="front program-card-logo"
+					src="https://cdn.hackclub.com/019d9220-9c84-702a-b94e-2d30e50a499d/midnight-logo.webp"
 					alt="Midnight logo"
 				/>
 			</div>
@@ -537,12 +535,12 @@
 		<a class="program-card" href="https://blueprint.hackclub.com" target="_blank" rel="noopener">
 			<img
 				class="program-card-img"
-				src="https://manifesto.hackclub.com/images/blueprint.png"
+				src="https://cdn.hackclub.com/019d9226-06e7-728e-81ea-12f72df08181/manifesto.hackclub.com__images__blueprint.png.webp"
 				alt="Blueprint"
 			/>
 			<img
 				class="program-card-logo"
-				src="https://cdn.hackclub.com/019d75da-1a49-739f-8e97-b3f6f15961ce/image.png"
+				src="https://cdn.hackclub.com/019d9226-b27a-7d56-b90f-d62b88efeb29/cdn.hackclub.com__019d75da-1a49-739f-8e97-b3f6f15961ce__image.png.webp"
 				alt="Blueprint logo"
 				style="width:300px"
 			/>
@@ -555,12 +553,12 @@
 		<a class="program-card" href="https://siege.hackclub.com" target="_blank" rel="noopener">
 			<img
 				class="program-card-img"
-				src="https://manifesto.hackclub.com/images/siege.png"
+				src="https://cdn.hackclub.com/019d9226-35c7-753a-999a-ff293fa6e3ed/manifesto.hackclub.com__images__siege.png.webp"
 				alt="Siege"
 			/>
 			<img
 				class="program-card-logo"
-				src="https://cdn.hackclub.com/019d75da-1ce9-7d50-9a52-53aadbfdfce7/image.png"
+				src="https://cdn.hackclub.com/019d9226-bda0-7214-863f-fbe54de0d094/cdn.hackclub.com__019d75da-1ce9-7d50-9a52-53aadbfdfce7__image.png.webp"
 				alt="Siege logo"
 				style="width:161px"
 			/>
@@ -577,11 +575,11 @@
 			href="https://summer.hackclub.com"
 			target="_blank"
 			rel="noopener"
-			style="background-image:url('https://manifesto.hackclub.com/images/summer-of-making.png');background-size:cover;background-position:bottom"
+			style="background-image:url('https://cdn.hackclub.com/019d9226-4624-7611-8f95-816315193e80/manifesto.hackclub.com__images__summer-of-making.png.webp');background-size:cover;background-position:bottom"
 		>
 			<img
 				class="mini-card-logo"
-				src="https://manifesto.hackclub.com/images/som-logo.png"
+				src="https://cdn.hackclub.com/019d9226-84ba-7696-ab5c-5676754ce263/manifesto.hackclub.com__images__som-logo.png.webp"
 				alt="Summer of Making"
 				style="width:60%;height:auto"
 			/>
@@ -590,12 +588,12 @@
 		<a class="mini-card" href="https://campfire.hackclub.com" target="_blank" rel="noopener">
 			<img
 				class="mini-card-bg"
-				src="https://manifesto.hackclub.com/images/campfire-bg.png"
+				src="https://cdn.hackclub.com/019d9226-09d7-7b90-909c-49086c91eb05/manifesto.hackclub.com__images__campfire-bg.png.webp"
 				alt=""
 			/>
 			<img
 				class="mini-card-logo"
-				src="https://manifesto.hackclub.com/images/campfire-logo.png"
+				src="https://cdn.hackclub.com/019d9226-512f-7336-9bfe-8de2f6f8b21c/manifesto.hackclub.com__images__campfire-logo.png.webp"
 				alt="Campfire"
 				style="width:65%;height:auto"
 			/>
@@ -606,11 +604,11 @@
 			href="https://sleepover.hackclub.com"
 			target="_blank"
 			rel="noopener"
-			style="background-color:#dbdcf7;background-image:url('https://manifesto.hackclub.com/images/sleepover-pattern.png');background-repeat:repeat;background-size:112px"
+			style="background-color:#dbdcf7;background-image:url('https://cdn.hackclub.com/019d9219-39b9-7952-8e93-739a5f2852cd/manifesto.hackclub.com__images__sleepover-pattern.png.webp');background-repeat:repeat;background-size:112px"
 		>
 			<img
 				class="mini-card-logo"
-				src="https://manifesto.hackclub.com/images/sleepover-logo.png"
+				src="https://cdn.hackclub.com/019d9226-7696-7f2d-8ad2-5680f8ddd281/manifesto.hackclub.com__images__sleepover-logo.png.webp"
 				alt="Sleepover"
 				style="width:60%;height:auto"
 			/>
@@ -619,7 +617,7 @@
 		<a class="mini-card" href="https://overglade.hackclub.com" target="_blank" rel="noopener">
 			<img
 				class="mini-card-bg"
-				src="https://manifesto.hackclub.com/images/overglade.png"
+				src="https://cdn.hackclub.com/019d9226-2983-746c-8338-675ee8d43c87/manifesto.hackclub.com__images__overglade.png.webp"
 				alt="Overglade"
 			/>
 		</a>
@@ -633,33 +631,33 @@
 		>
 			<img
 				class="mini-card-bg"
-				src="https://manifesto.hackclub.com/images/undercity-bg.png"
+				src="https://cdn.hackclub.com/019d9226-3f61-7c44-821c-0454f6b9d375/manifesto.hackclub.com__images__undercity-bg.png.webp"
 				alt=""
 			/>
 			<img
 				class="mini-card-logo"
-				src="https://manifesto.hackclub.com/images/undercity-logo.png"
+				src="https://cdn.hackclub.com/019d9226-91d6-7930-9cef-08d4b1ecfbbe/manifesto.hackclub.com__images__undercity-logo.png.webp"
 				alt="Undercity"
 				style="width:65%;height:auto"
 			/>
 		</a>
 
 		<a class="mini-card" href="https://shiba.hackclub.com" target="_blank" rel="noopener">
-			<img class="mini-card-bg" src="https://manifesto.hackclub.com/images/shiba-bg.png" alt="" />
+			<img class="mini-card-bg" src="https://cdn.hackclub.com/019d9226-2fa5-736f-bb48-f4ccae39caab/manifesto.hackclub.com__images__shiba-bg.png.webp" alt="" />
 			<div class="mini-card-overlay"></div>
 			<img
 				class="mini-card-logo"
-				src="https://manifesto.hackclub.com/images/shiba-logo.png"
+				src="https://cdn.hackclub.com/019d9226-6b1f-7bcd-b8e6-7109ef124067/manifesto.hackclub.com__images__shiba-logo.png.webp"
 				alt="Shiba Arcade"
 				style="width:308px;max-width:80%;height:auto;opacity:0.8;filter:drop-shadow(0 0 80px white)"
 			/>
 		</a>
 
 		<a class="mini-card" href="https://hackpad.hackclub.com" target="_blank" rel="noopener">
-			<img class="mini-card-bg" src="https://manifesto.hackclub.com/images/hackpad-bg.png" alt="" />
+			<img class="mini-card-bg" src="https://cdn.hackclub.com/019d9226-0c75-75c8-abac-620f1e8975e4/manifesto.hackclub.com__images__hackpad-bg.png.webp" alt="" />
 			<img
 				class="mini-card-logo"
-				src="https://manifesto.hackclub.com/images/hackpad-logo.png"
+				src="https://cdn.hackclub.com/019d9226-5507-7f24-9a1b-3cca3a1b8069/manifesto.hackclub.com__images__hackpad-logo.png.webp"
 				alt="Hackpad"
 				style="width:65%;height:auto"
 			/>
@@ -668,12 +666,12 @@
 		<a class="mini-card" href="https://horizons.hackclub.com" target="_blank" rel="noopener">
 			<img
 				class="mini-card-bg"
-				src="https://manifesto.hackclub.com/images/horizons-bg.png"
+				src="https://cdn.hackclub.com/019d9226-10bc-71f8-af20-b10cc75e8ce1/manifesto.hackclub.com__images__horizons-bg.png.webp"
 				alt=""
 			/>
 			<img
 				class="mini-card-logo"
-				src="https://manifesto.hackclub.com/images/horizons-logo.png"
+				src="https://cdn.hackclub.com/019d9226-5e01-7b26-b441-a18dffc493a8/manifesto.hackclub.com__images__horizons-logo.png.webp"
 				alt="Horizons"
 				style="width:100%;height:auto"
 			/>
@@ -691,7 +689,7 @@
 	>
 		<img
 			class="notes-card-photo"
-			src="https://manifesto.hackclub.com/images/notes-tongyu.jpg"
+			src="https://cdn.hackclub.com/019d9226-c92a-7593-a762-823597d286d5/manifesto.hackclub.com__images__notes-tongyu.jpg.webp"
 			alt="Tongyu"
 		/>
 		<div class="notes-card-text">
@@ -707,7 +705,7 @@
 	>
 		<img
 			class="notes-card-photo"
-			src="https://cdn.hackclub.com/019d7609-92c0-7e58-8b43-c91362db8aa9/image_720-4.png"
+			src="https://cdn.hackclub.com/019d9226-c0e1-7eee-87a3-7ee3991d6d58/cdn.hackclub.com__019d7609-92c0-7e58-8b43-c91362db8aa9__image_720-4.png.webp"
 			alt="Deven"
 		/>
 		<div class="notes-card-text">
@@ -729,7 +727,7 @@
 		<img
 			class="panel-img left"
 			alt="Collage of Hack Club events"
-			src="https://cdn.hackclub.com/019d6191-88a7-7daa-b4c0-fdcae2fffa38/attend_hc_events.png"
+			src="https://cdn.hackclub.com/019d9226-981a-7067-946a-34432f31f525/cdn.hackclub.com__019d6191-88a7-7daa-b4c0-fdcae2fffa38__attend_hc_events.png.webp"
 		/>
 		<div class="panel-text right">
 			<h3 class="stitle">Travel the world for Hack Club events</h3>
@@ -747,13 +745,13 @@
 				Twitter, and more, to post about all the amazing people you'll meet.
 			</p>
 		</div>
-		<img class="panel-img right" alt="Collage of Hack Clubbers doing media" src="og.png" />
+		<img class="panel-img right" alt="Collage of Hack Clubbers doing media" src="og.jpg" />
 	</div>
 	<div class="hwyd-panel">
 		<img
 			class="panel-img left"
 			alt="Hack Club gap year teenagers"
-			src="/gap-years.jpg"
+			src="/gap-years.webp"
 		/>
 		<div class="panel-text right">
 			<h3 class="stitle">Join 40 other teenage gap years</h3>
