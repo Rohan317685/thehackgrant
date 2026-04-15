@@ -125,9 +125,10 @@
 			Club's events, game jams, hackathons, transit games (woot <a href="https://game.hackclub.com/"
 				>HCTG</a
 			>!). You'll see the pinnacle of HC, the contraptions made at
-			<a href="https://blueprint.hackclub.com/prototype">hardware hackathons</a> and viral creations made
-			by Hack Clubbers (<a href="https://github.com/kavishdevar/librepods">librepods</a>, anybody?). You'll be the face of Hack Club, showing the world everything
-			on the other side with full creative agency.
+			<a href="https://blueprint.hackclub.com/prototype">hardware hackathons</a> and viral creations
+			made by Hack Clubbers (<a href="https://github.com/kavishdevar/librepods">librepods</a>,
+			anybody?). You'll be the face of Hack Club, showing the world everything on the other side
+			with full creative agency.
 		</p>
 		<p>
 			Hack Club, to me, has been one of the most genuinely positively impactful things in my life,
