@@ -133,7 +133,7 @@
 			Hack Club, to me, has been one of the most genuinely positively impactful things in my life,
 			and I'm convinced it'll be for you as well.
 		</p>
-		<p style="color: var(--color-text-dim);">- Sahil, 2026 YSWS intern @ Hack Club</p>
+		<p style="color: var(--color-text-dim);">- Sahil Deshmukh, 2026 Summer Intern</p>
 		<br />
 		<h3>Rushil's Note</h3>
 		<p>
