@@ -42,7 +42,7 @@
 			Hi there! My name is Max, and I'm a 15-year-old intern at Hack Club as well as the lead
 			designer for this website! I wasn't tasked to write this by HQ, but over the course of making
 			this site, I felt like I wanted to write something for you to read. If you're reading this
-			note, it likely means you're thinking of applying to become a media gap year for Hack Club!
+			note, it likely means you're thinking of applying for TheHackGrant!
 			Perhaps you are skeptical. Of course, many of you will never have heard of Hack Club, or maybe
 			you have and you're still not convinced. Let me tell you why you should apply.
 		</p>
@@ -63,13 +63,11 @@
 			<strong>2. The independence is freeing.</strong>
 			<br />
 			Although you may also get this from a college experience, I'd argue that it's much more true working
-			with Hack Club. Tongyu (a 2025-26 gap year) has a
+			with Hack Club. Tongyu (a Hack Clubber) has a
 			<a href="https://journal.tongyu.fish/sf">blog</a> that describes her experience which is definitely
-			worth a read, but to put it simply: Hack Club frees you to live alone. You might share an apartment
-			or a house that you rent with other gap years, but other than that, you're on your own. You travel
-			by yourself, you cook by yourself, you (unfortunately) clean by yourself, and you (most importantly)
-			make decisions by yourself. You learn to live your life exactly the way you want to. This is an
-			emulation of the adult experience you won't get until you graduate college. Here's an sneak peek.
+			worth a read. And when you get a grant to build something real, you get that same kind of independence:
+			you set the direction, you make the calls, and you own the outcome. There's no one telling you what
+			to build or how to build it. You learn to trust yourself and your ideas. Here's a sneak peek.
 		</p>
 		<p>
 			<strong>3. It will be so much fun.</strong>
@@ -90,11 +88,11 @@
 			What was this about again? Oh right. Doesn't that sound like a whole lot of fun?
 		</p>
 		<p>
-			Hopefully by now, I have convinced you on the idea of a gap year at Hack Club. But maybe you
+			Hopefully by now, I have convinced you to apply for TheHackGrant. But maybe you
 			think you shouldn't apply for other reasons. Like, you don't think you will get in. Or, you
 			don't think you are qualified enough just yet. To answer these concerns of yours: apply
-			anyways. We don't expect you to be the most skilled or the most seasoned in your field. We are
-			looking for people are will be dedicated to their work and to our cause.
+			anyways. We don't expect you to be the most skilled or the most seasoned builder. We are
+			looking for teens who are dedicated to their idea and ready to ship something real.
 		</p>
 		<p style="color: var(--color-text-dim);">- Max Tran, 2026 Summer Intern</p>
 		<br />
@@ -127,14 +125,15 @@
 			> if you'd like to read more. Hack Club is transformative.
 		</p>
 		<p>
-			Enough about me. Let's talk about you, our future media gap year. You'll go to all of Hack
-			Club's events, game jams, hackathons, transit games (woot <a href="https://game.hackclub.com/"
+			Enough about me. Let's talk about you, our future grant recipient. You'll build something at
+			the intersection of what you love and what the world needs. You'll tap into Hack Club's community
+			— game jams, hackathons, transit games (woot <a href="https://game.hackclub.com/"
 				>HCTG</a
-			>!). You'll see the pinnacle of HC, the contraptions made at
+			>!). You'll see the pinnacle of teen building, the contraptions made at
 			<a href="https://blueprint.hackclub.com/prototype">hardware hackathons</a> and viral creations
 			made by Hack Clubbers (<a href="https://github.com/kavishdevar/librepods">librepods</a>,
-			anybody?). You'll be the face of Hack Club, showing the world everything on the other side
-			with full creative agency.
+			anybody?). And with TheHackGrant, you'll have the resources to build something just as
+			impressive — with full creative agency.
 		</p>
 		<p>
 			Hack Club, to me, has been one of the most genuinely positively impactful things in my life,

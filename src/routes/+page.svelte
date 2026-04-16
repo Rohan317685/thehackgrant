@@ -7,13 +7,6 @@
 
 	const novella = resolve('/novella');
 
-	const DUE_YEAR: number = 2026;
-	const DUE_MONTH: number = 4;
-	const DUE_DAY: number = 30;
-
-	const dueDate: Date = new Date(DUE_YEAR, DUE_MONTH - 1, DUE_DAY);
-	const daysUntilDue: number = Math.ceil((dueDate.getTime() - Date.now()) / 86400000);
-
 	const topStripImages = [...topCarouselImages, ...topCarouselImages];
 	const bottomStripImages = [...bottomCarouselImages, ...bottomCarouselImages];
 
@@ -25,7 +18,7 @@
 	const TOP_SPEED = 75;
 	const BOTTOM_SPEED = 75;
 	const WORD_SEPARATOR = ' ';
-	const HERO_HIGHLIGHT_WORDS = ['hackers', 'builders', 'programmers', 'artists'];
+	const HERO_HIGHLIGHT_WORDS = ['hardware', 'software', 'tools', 'games', 'things'];
 
 	let heroHighlightWordIndex = $state(0);
 
@@ -146,60 +139,48 @@
 		| { type: 'link'; text: string; href: string };
 
 	const TYPING_TOKENS: Token[] = [
-		{ type: 'link', text: 'Hack Club', href: 'https://hackclub.com' },
-		{ type: 'word', text: 'is' },
-		{ type: 'word', text: 'an' },
-		{ type: 'word', text: 'international' },
-		{ type: 'word', text: 'nonprofit' },
-		{ type: 'word', text: 'organization' },
-		{ type: 'word', text: 'of' },
-		{ type: 'word', text: 'teenagers' },
-		{ type: 'word', text: 'who' },
-		{ type: 'word', text: 'code' },
-		{ type: 'word', text: 'together.' },
-		{ type: 'word', text: "We're" },
-		{ type: 'word', text: 'also' },
-		{ type: 'word', text: 'a' },
-		{ type: 'word', text: 'community,' },
-		{ type: 'word', text: 'run' },
-		{ type: 'word', text: 'by' },
-		{ type: 'word', text: 'teenagers' },
-		{ type: 'word', text: 'for' },
-		{ type: 'word', text: 'teenagers,' },
-		{ type: 'word', text: 'full' },
-		{ type: 'word', text: 'of' },
-		{ type: 'word', text: 'amazing' },
+		{ type: 'word', text: 'Most' },
 		{ type: 'word', text: 'people' },
-		{ type: 'word', text: 'and' },
-		{ type: 'word', text: 'amazing' },
-		{ type: 'word', text: 'stories.' },
-		{ type: 'break' },
-		{ type: 'word', text: "We're" },
-		{ type: 'word', text: 'looking' },
-		{ type: 'word', text: 'for' },
-		{ type: 'word', text: 'storytellers', bold: true, accent: true },
-		{ type: 'word', text: '- people' },
-		{ type: 'word', text: 'who' },
-		{ type: 'word', text: 'can' },
-		{ type: 'word', text: 'use' },
+		{ type: 'word', text: 'will' },
+		{ type: 'word', text: 'tell' },
 		{ type: 'word', text: 'a' },
-		{ type: 'word', text: 'camera' },
-		{ type: 'word', text: 'or' },
-		{ type: 'word', text: 'a' },
-		{ type: 'word', text: 'stylus' },
-		{ type: 'word', text: 'as' },
-		{ type: 'word', text: 'a' },
-		{ type: 'word', text: 'window' },
-		{ type: 'word', text: 'into' },
-		{ type: 'word', text: 'our' },
-		{ type: 'word', text: 'world -' },
-		{ type: 'word', text: 'and' },
-		{ type: 'word', text: "we're" },
-		{ type: 'word', text: 'looking' },
-		{ type: 'word', text: 'for' },
-		{ type: 'word', text: 'you' },
+		{ type: 'word', text: 'teenager' },
+		{ type: 'word', text: 'with' },
+		{ type: 'word', text: 'an' },
+		{ type: 'word', text: 'idea' },
 		{ type: 'word', text: 'to' },
-		{ type: 'underline', text: 'tell our stories.' }
+		{ type: 'word', text: 'wait.' },
+		{ type: 'word', text: 'Wait' },
+		{ type: 'word', text: 'until' },
+		{ type: 'word', text: "you're" },
+		{ type: 'word', text: 'older.' },
+		{ type: 'word', text: 'Wait' },
+		{ type: 'word', text: 'until' },
+		{ type: 'word', text: 'you' },
+		{ type: 'word', text: 'have' },
+		{ type: 'word', text: 'a' },
+		{ type: 'word', text: 'degree.' },
+		{ type: 'word', text: 'Wait' },
+		{ type: 'word', text: 'until' },
+		{ type: 'word', text: "you're" },
+		{ type: 'word', text: '"ready."' },
+		{ type: 'break' },
+		{ type: 'word', text: "We" },
+		{ type: 'word', text: "don't" },
+		{ type: 'word', text: "think" },
+		{ type: 'word', text: "teens" },
+		{ type: 'word', text: "should" },
+		{ type: 'word', text: "wait." },
+		{ type: 'word', text: "If" },
+		{ type: 'word', text: "you're" },
+		{ type: 'word', text: 'under', bold: true, accent: true },
+		{ type: 'word', text: '18', bold: true, accent: true },
+		{ type: 'word', text: 'and' },
+		{ type: 'word', text: 'have' },
+		{ type: 'word', text: 'something' },
+		{ type: 'word', text: 'to' },
+		{ type: 'word', text: 'build,' },
+		{ type: 'underline', text: "we'll fund it." }
 	];
 
 	let heroScrollContainer: HTMLDivElement | undefined;
@@ -284,10 +265,9 @@
 								src="https://assets.hackclub.com/flag-standalone-wtransparent.svg"
 								alt="Hack Club flag"
 							/>
-							<h1 id="title">tell our stories.</h1>
+							<h1 id="title">we fund teens.</h1>
 							<p id="body">
-								Hack Club is hiring 2 teenage filmmakers to travel the world making films about the
-								next generation of
+								$50–$200 grants for teens under 18 to build
 								<span class="hero-body-crossfade-wrapper">
 									<span class="hero-body-crossfade hero-body-crossfade-sizer" aria-hidden="true">
 										<strong class="hero-highlight"
@@ -312,15 +292,14 @@
 							<p
 								style="font-size: clamp(12px, 1.8vh, 22px); color: #aaa; letter-spacing: 0.05em; margin-top: 0.5em;"
 							>
-								Full-time, in-person &middot; 1 year, $50,000 USD &middot; $10k travel + $5k
-								equipment budget
+								$50–$200 &middot; Hardware & software &middot; Under 18 &middot; Rolling applications
 							</p>
 						</div>
 						<div class="button">
 							<a
 								style="margin-top: 2vh;"
-								href="https://forms.hackclub.com/mediafellowship"
-								class="apply-button">Apply Now ({daysUntilDue} days remaining)</a
+								href="https://fillout.com/thehackgrant"
+								class="apply-button">Apply Now — rolling</a
 							>
 						</div>
 						<p id="scroll-down">Scroll down to read <span id="scroll-down-arrow">↓</span></p>
@@ -332,7 +311,7 @@
 								target="_blank"
 								rel="noopener noreferrer"
 								style="text-decoration: underline; color: inherit;">Paolo</a
-							>, our media gap year last year ↓
+							>, a teen filmmaker at Hack Club ↓
 						</p>
 						<iframe
 							class="hero-video"
@@ -402,23 +381,18 @@
 </div>
 
 <section class="fellowship-section">
-	<h2 class="title">Introducing the Hack Club Media Gap Year Fellowship</h2>
+	<h2 class="title">TheHackGrant</h2>
 	<p class="fellowship-body">
-		This is a paid, full-time, in-person role. $50k/year + $5k equipment stipend + $10k travel +
-		healthcare & benefits at Hack Club HQ in Burlington, Vermont.
+		$50–$200, no strings attached, for teens under 18 to build hardware or software projects.
+		We back the builder, not the résumé.
 	</p>
 	<p class="fellowship-body">
-		It's intended to be something you do for a year before you go to college or whatever your plans
-		are after high school, but if you are on an alternate schooling path, that works too!<br /><br
-		/>You will be based at Hack Club HQ, working on projects and making videos with the team, as
-		well as travelling all over the world to different Hack Club events!<br /><br /><strong
-			>The job:</strong
-		> Make Hack Club a household name. Reach new audiences and as many teens as you can.
+		You don't need to be enrolled in anything. You don't need prior experience. You just need an
+		idea and the drive to ship it.<br /><br />
+		Applications are <strong>rolling</strong> — apply whenever you're ready.
 	</p>
 	<div class="button">
-		<a href="https://forms.hackclub.com/mediafellowship" class="apply-button"
-			>Apply Now ({daysUntilDue} days remaining)</a
-		>
+		<a href="https://fillout.com/thehackgrant" class="apply-button">Apply Now</a>
 	</div>
 </section>
 
@@ -483,11 +457,10 @@
 		>, and we ship out thousands of cool prizes, from stickers to laptops to plushies of our mascot!
 	</p>
 	<section class="videos-body">
-		<h1 class="title">Some videos we've posted before:</h1>
+		<h1 class="title">Some things teens have built with Hack Club:</h1>
 		<div id="video-disclaimer-container">
 			<h3>
-				Disclaimer: You don't have to follow this style! It's just an example of what we've posted
-				before
+				These are just examples of what teens in the Hack Club community create every year.
 			</h3>
 		</div>
 
@@ -735,7 +708,7 @@
 		/>
 		<div class="notes-card-text">
 			<p class="notes-card-title">this is why you should do a hack club gap year. →</p>
-			<p class="notes-card-author">Written by Tongyu, 2025-26 Gap Year</p>
+			<p class="notes-card-author">Written by Tongyu, Hack Clubber</p>
 		</div>
 	</a>
 
@@ -762,7 +735,7 @@
 
 <section class="hwyd-section">
 	<h2 class="title">
-		Here's what <i><span style="font-family: Garamond; font-weight: bold">you'll</span></i> do.
+		Here's what <i><span style="font-family: Garamond; font-weight: bold">you'll</span></i> get.
 	</h2>
 	<div class="hwyd-panel">
 		<img
@@ -771,19 +744,19 @@
 			src="https://cdn.hackclub.com/019d9226-981a-7067-946a-34432f31f525/cdn.hackclub.com__019d6191-88a7-7daa-b4c0-fdcae2fffa38__attend_hc_events.png.webp"
 		/>
 		<div class="panel-text right">
-			<h3 class="stitle">Travel the world for Hack Club events</h3>
+			<h3 class="stitle">$50–$200 to build what you're imagining</h3>
 			<p class="sbody">
-				Hack Club hosts hundreds of events across the globe every year. You'll promote, attend,
-				document, and create content for them.
+				Hardware, software, whatever — if you're under 18 and have an idea worth building,
+				we'll put money behind it. No pitch decks. No gatekeepers. Just apply.
 			</p>
 		</div>
 	</div>
 	<div class="hwyd-panel">
 		<div class="panel-text left">
-			<h3 class="stitle">Run our social media</h3>
+			<h3 class="stitle">We back the builder, not the résumé</h3>
 			<p class="sbody">
-				You'll have full control over our social media presence across YouTube, Instagram, TikTok,
-				Twitter, and more, to post about all the amazing people you'll meet.
+				No experience required. No GPA. No credentials. We care about what you want to build
+				and whether you have the drive to ship it — that's it.
 			</p>
 		</div>
 		<img
@@ -793,17 +766,12 @@
 		/>
 	</div>
 	<div class="hwyd-panel">
-		<img class="panel-img left" alt="Hack Club gap year teenagers" src="/gap-years.webp" />
+		<img class="panel-img left" alt="Hack Club teenagers" src="https://cdn.hackclub.com/019d9226-981a-7067-946a-34432f31f525/cdn.hackclub.com__019d6191-88a7-7daa-b4c0-fdcae2fffa38__attend_hc_events.png.webp" />
 		<div class="panel-text right">
-			<h3 class="stitle">Join 40 other teenage gap years</h3>
+			<h3 class="stitle">Rolling applications — apply whenever</h3>
 			<p class="sbody">
-				You'll join 40 technical teenage <a
-					href="https://manifesto.hackclub.com"
-					target="_blank"
-					rel="noopener noreferrer"
-					style="text-decoration: underline; color: inherit;">gap years</a
-				> from across the USA and world who design and run all of Hack Club's programs. Every program
-				above was ran by 18 and 19 year old gap years at Hack Club.
+				There's no deadline. No cohort. No waiting for a cycle to open.
+				When you're ready to build, apply. We review on a rolling basis.
 			</p>
 		</div>
 	</div>
@@ -813,9 +781,7 @@
 	<h1 class="title">The door is open.</h1>
 	<div class="vbutton-container">
 		<div class="button">
-			<a href="https://forms.hackclub.com/mediafellowship" class="apply-button"
-				>Apply Now ({daysUntilDue} days remaining)</a
-			>
+			<a href="https://fillout.com/thehackgrant" class="apply-button">Apply Now</a>
 		</div>
 		<div class="button">
 			<a id="linkButton" href={novella}>A note from the designers ↗</a>
