@@ -2,103 +2,13 @@
 	import { resolve } from '$app/paths';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { bottomCarouselImages, topCarouselImages } from '$lib/carousel';
 	import './page.css';
 
 	const novella = resolve('/novella');
-
-	const topStripImages = [...topCarouselImages, ...topCarouselImages];
-	const bottomStripImages = [...bottomCarouselImages, ...bottomCarouselImages];
-
-	let topStripA: HTMLDivElement | undefined;
-	let topStripB: HTMLDivElement | undefined;
-	let bottomStripA: HTMLDivElement | undefined;
-	let bottomStripB: HTMLDivElement | undefined;
-
-	const TOP_SPEED = 75;
-	const BOTTOM_SPEED = 75;
 	const WORD_SEPARATOR = ' ';
 	const HERO_HIGHLIGHT_WORDS = ['hardware', 'software', 'tools', 'games', 'things'];
 
 	let heroHighlightWordIndex = $state(0);
-
-	function startTeleportLoop(
-		stripA: HTMLDivElement,
-		stripB: HTMLDivElement,
-		direction: 1 | -1,
-		speed: number
-	) {
-		let frameId = 0;
-		let lastTimestamp = 0;
-		let stripWidth = 0;
-		let positionA = 0;
-		let positionB = 0;
-
-		const applyPositions = () => {
-			stripA.style.transform = `translate3d(${positionA}px, 0, 0)`;
-			stripB.style.transform = `translate3d(${positionB}px, 0, 0)`;
-		};
-
-		const resetPositions = () => {
-			stripWidth = stripA.getBoundingClientRect().width;
-			if (stripWidth <= 0) return;
-
-			if (direction === -1) {
-				positionA = 0;
-				positionB = stripWidth;
-			} else {
-				positionA = -stripWidth;
-				positionB = 0;
-			}
-
-			applyPositions();
-		};
-
-		const animate = (timestamp: number) => {
-			if (!stripWidth) {
-				frameId = requestAnimationFrame(animate);
-				return;
-			}
-
-			if (!lastTimestamp) {
-				lastTimestamp = timestamp;
-			}
-
-			const deltaSeconds = (timestamp - lastTimestamp) / 1000;
-			lastTimestamp = timestamp;
-
-			const movement = speed * deltaSeconds * direction;
-			positionA += movement;
-			positionB += movement;
-
-			if (direction === -1) {
-				if (positionA <= -stripWidth) positionA = positionB + stripWidth;
-				if (positionB <= -stripWidth) positionB = positionA + stripWidth;
-			} else {
-				if (positionA >= stripWidth) positionA = positionB - stripWidth;
-				if (positionB >= stripWidth) positionB = positionA - stripWidth;
-			}
-
-			applyPositions();
-			frameId = requestAnimationFrame(animate);
-		};
-
-		const resizeObserver = new ResizeObserver(() => {
-			resetPositions();
-			lastTimestamp = 0;
-		});
-
-		resizeObserver.observe(stripA);
-		window.addEventListener('resize', resetPositions);
-		resetPositions();
-		frameId = requestAnimationFrame(animate);
-
-		return () => {
-			cancelAnimationFrame(frameId);
-			resizeObserver.disconnect();
-			window.removeEventListener('resize', resetPositions);
-		};
-	}
 
 	onMount(() => {
 		const scrollDown = document.getElementById('scroll-down') as HTMLParagraphElement;
@@ -114,21 +24,12 @@
 			});
 		});
 
-		if (!topStripA || !topStripB || !bottomStripA || !bottomStripB) {
-			return;
-		}
-
 		const heroWordInterval = window.setInterval(() => {
 			heroHighlightWordIndex = (heroHighlightWordIndex + 1) % HERO_HIGHLIGHT_WORDS.length;
 		}, 2000);
 
-		const stopTop = startTeleportLoop(topStripA, topStripB, -1, TOP_SPEED);
-		const stopBottom = startTeleportLoop(bottomStripA, bottomStripB, 1, BOTTOM_SPEED);
-
 		return () => {
 			window.clearInterval(heroWordInterval);
-			stopTop();
-			stopBottom();
 		};
 	});
 
@@ -189,8 +90,6 @@
 		if (!heroScrollContainer) return;
 
 		const heroEl = heroScrollContainer.querySelector<HTMLElement>('.hero');
-		const carouselTop = heroScrollContainer.querySelector<HTMLElement>('.carousel-top');
-		const carouselBottom = heroScrollContainer.querySelector<HTMLElement>('.carousel-bottom');
 		const typingWordEls = heroScrollContainer.querySelectorAll<HTMLElement>('.typing-word');
 		const total = typingWordEls.length;
 		const scrollDownEl = document.getElementById('scroll-down') as HTMLElement;
@@ -217,16 +116,6 @@
 					word.classList.toggle('underline-visible', wp > 0.5);
 				}
 			});
-
-			const carouselProgress = Math.max(0, Math.min(1, (progress - 0.93) / 0.07));
-			if (carouselTop) {
-				carouselTop.style.transform = `translateY(${-carouselProgress * 110}%)`;
-				carouselTop.style.opacity = String(1 - carouselProgress);
-			}
-			if (carouselBottom) {
-				carouselBottom.style.transform = `translateY(${carouselProgress * 100}%)`;
-				carouselBottom.style.opacity = String(1 - carouselProgress);
-			}
 		};
 
 		window.addEventListener('scroll', onScroll, { passive: true });
@@ -238,23 +127,6 @@
 
 <div class="hero-scroll-container" bind:this={heroScrollContainer}>
 	<div class="carousel-page">
-		<div class="carousel-viewport carousel-top">
-			<div class="teleport-strip" bind:this={topStripA}>
-				{#each topStripImages as src, index (`top-a-${index}`)}
-					<div class="image-card">
-						<img {src} alt="Carousel item" draggable="false" />
-					</div>
-				{/each}
-			</div>
-			<div class="teleport-strip" bind:this={topStripB} aria-hidden="true">
-				{#each topStripImages as src, index (`top-b-${index}`)}
-					<div class="image-card">
-						<img {src} alt="Carousel item" draggable="false" />
-					</div>
-				{/each}
-			</div>
-		</div>
-
 		<div class="herocontainer">
 			<div class="hero">
 				<div class="hero-row">
@@ -270,11 +142,11 @@
 								$50–$200 grants for teens under 18 to build
 								<span class="hero-body-crossfade-wrapper">
 									<span class="hero-body-crossfade hero-body-crossfade-sizer" aria-hidden="true">
-										<strong class="hero-highlight"
-											>{HERO_HIGHLIGHT_WORDS.reduce((a, b) =>
+										<strong class="hero-highlight">
+											{HERO_HIGHLIGHT_WORDS.reduce((a, b) =>
 												a.length >= b.length ? a : b
-											)}.</strong
-										>
+											)}.
+										</strong>
 									</span>
 									{#key heroHighlightWordIndex}
 										<span
@@ -282,75 +154,44 @@
 											in:fade={{ duration: 350 }}
 											out:fade={{ duration: 350 }}
 										>
-											<strong class="hero-highlight"
-												>{HERO_HIGHLIGHT_WORDS[heroHighlightWordIndex]}.</strong
-											>
+											<strong class="hero-highlight">
+												{HERO_HIGHLIGHT_WORDS[heroHighlightWordIndex]}.
+											</strong>
 										</span>
 									{/key}
 								</span>
 							</p>
-							<p
-								style="font-size: clamp(12px, 1.8vh, 22px); color: #aaa; letter-spacing: 0.05em; margin-top: 0.5em;"
-							>
-								$50–$200 &middot; Hardware & software &middot; Under 18 &middot; Rolling applications
-							</p>
+							<figure class="hero-video-figure">
+								<p class="hero-video-annotation">
+									made by <a
+										href="https://www.instagram.com/paoloaverycarino/"
+										target="_blank"
+										rel="noopener noreferrer"
+										style="text-decoration: underline; color: inherit;">Paolo</a
+									>, a teen filmmaker at Hack Club ↓
+								</p>
+								<iframe
+									class="hero-video"
+									src="https://www.youtube-nocookie.com/embed/kkbf092Los0?autoplay=1&mute=1&controls=0&loop=1&playlist=kkbf092Los0&modestbranding=0"
+									title="Hack Club Media"
+									frameborder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen
+								></iframe>
+								<figcaption class="hero-video-caption">
+									<a
+										href="https://shiba.hackclub.com"
+										target="_blank"
+										rel="noopener noreferrer"
+										style="text-decoration: underline;">Hack Club Shiba</a
+									> - Nov, 2025 in Tokyo, Japan
+								</figcaption>
+							</figure>
 						</div>
-						<div class="button">
-							<a
-								style="margin-top: 2vh;"
-								href="https://fillout.com/thehackgrant"
-								class="apply-button">Apply Now — rolling</a
-							>
-						</div>
-						<p id="scroll-down">Scroll down to read <span id="scroll-down-arrow">↓</span></p>
 					</div>
-					<figure class="hero-video-figure">
-						<p class="hero-video-annotation">
-							made by <a
-								href="https://www.instagram.com/paoloaverycarino/"
-								target="_blank"
-								rel="noopener noreferrer"
-								style="text-decoration: underline; color: inherit;">Paolo</a
-							>, a teen filmmaker at Hack Club ↓
-						</p>
-						<iframe
-							class="hero-video"
-							src="https://www.youtube-nocookie.com/embed/kkbf092Los0?autoplay=1&mute=1&controls=0&loop=1&playlist=kkbf092Los0&modestbranding=0"
-							title="Hack Club Media"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						></iframe>
-						<figcaption class="hero-video-caption">
-							<a
-								href="https://shiba.hackclub.com"
-								target="_blank"
-								rel="noopener noreferrer"
-								style="text-decoration: underline;">Hack Club Shiba</a
-							> - Nov, 2025 in Tokyo, Japan
-						</figcaption>
-					</figure>
 				</div>
 			</div>
 		</div>
-
-		<div class="carousel-viewport carousel-bottom">
-			<div class="teleport-strip" bind:this={bottomStripA}>
-				{#each bottomStripImages as src, index (`bottom-a-${index}`)}
-					<div class="image-card">
-						<img {src} alt="Carousel item" draggable="false" />
-					</div>
-				{/each}
-			</div>
-			<div class="teleport-strip" bind:this={bottomStripB} aria-hidden="true">
-				{#each bottomStripImages as src, index (`bottom-b-${index}`)}
-					<div class="image-card">
-						<img {src} alt="Carousel item" draggable="false" />
-					</div>
-				{/each}
-			</div>
-		</div>
-
 		<div class="typing-overlay" id="first-intro">
 			<p class="typing-text">
 				{#each TYPING_TOKENS as token, i (i)}
