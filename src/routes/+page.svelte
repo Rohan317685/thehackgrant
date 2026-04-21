@@ -130,11 +130,11 @@
 		<div class="herocontainer">
 			<div class="hero">
 				<div class="hero-row">
-					<div class="hero-left">
+					<div class="hero-left hero-copy">
 						<div class="text">
 							<img
 								class="hero-flag"
-								src="https://assets.hackclub.com/flag-standalone-wtransparent.svg"
+								src="https://cdn.hackclub.com/019db1a2-41ec-7e9f-9638-fc72ebecea75/flag-orpheus-left.svg"
 								alt="Hack Club flag"
 							/>
 							<h1 id="title">we fund teens.</h1>
@@ -161,34 +161,25 @@
 									{/key}
 								</span>
 							</p>
-							<figure class="hero-video-figure">
-								<p class="hero-video-annotation">
-									made by <a
-										href="https://www.instagram.com/paoloaverycarino/"
-										target="_blank"
-										rel="noopener noreferrer"
-										style="text-decoration: underline; color: inherit;">Paolo</a
-									>, a teen filmmaker at Hack Club ↓
-								</p>
-								<iframe
-									class="hero-video"
-									src="https://www.youtube-nocookie.com/embed/kkbf092Los0?autoplay=1&mute=1&controls=0&loop=1&playlist=kkbf092Los0&modestbranding=0"
-									title="Hack Club Media"
-									frameborder="0"
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-									allowfullscreen
-								></iframe>
-								<figcaption class="hero-video-caption">
-									<a
-										href="https://shiba.hackclub.com"
-										target="_blank"
-										rel="noopener noreferrer"
-										style="text-decoration: underline;">Hack Club Shiba</a
-									> - Nov, 2025 in Tokyo, Japan
-								</figcaption>
-							</figure>
+							<p class="hero-credit">scroll down to see more ↓</p>
 						</div>
 					</div>
+					<figure class="hero-video-figure hero-media">
+						<img
+							class="hero-video"
+							src="https://cdn.hackclub.com/019dad20-2142-799c-878c-82e42a170492/zine-example-3.webp"
+							alt="Hack Club Shiba"
+						/>
+						<figcaption class="hero-video-caption">
+							<a
+								href="https://github.com/cheyao/icepi-zero"
+								target="_blank"
+								rel="noopener noreferrer"
+								style="text-decoration: underline;"
+								>By @cyao</a
+							> - A hackclubber project which raised 25,000$ on crowdfund 
+						</figcaption>
+					</figure>
 				</div>
 			</div>
 		</div>
@@ -307,33 +298,34 @@
 
 		<div id="videos-container">
 			<div class="video-container">
-				<iframe
-					id="fallout"
-					src="https://www.youtube-nocookie.com/embed/SrP2ZeNHm6s?si=kxVdUXMkOMGhsxXS"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					referrerpolicy="strict-origin-when-cross-origin"
-					allowfullscreen
-					loading="lazy"
-				></iframe>
+				<a
+					href="https://github.com/KaiPereira/CYBERPAD-0"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Open the CYBERPAD GitHub repository"
+				>
+					<img
+						id="LibrePods"
+						src="https://cdn.hackclub.com/019dad3e-c291-704f-bea4-b79bd71b8367/banner.png"
+						alt="CYBERPAD banner"
+						title="LibrePods banner"
+					/>
+				</a>
 				<p class="videos-subtext">
-					Fallout: An upcoming hardware hackathon taking place in Shenzhen, China this summer!
+					LibrePod; a project made by @kavishdevar (a Hackclubber)! 
 				</p>
 			</div>
 			<div class="video-container">
-				<iframe
-					id="shipwrecked"
-					src="https://www.youtube-nocookie.com/embed/uXWMr0gdLJA?si=Vb4hK6MBO0E5RDWB"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					referrerpolicy="strict-origin-when-cross-origin"
-					allowfullscreen
-					loading="lazy"
-				></iframe>
+				<a href="https://github.com/KaiPereira/CYBERPAD-01" target="_blank" rel="noopener noreferrer">
+					<img
+						id="shipwrecked"
+						src="https://cdn.hackclub.com/019db19b-983e-722e-9a84-ad859cefec62/527842521-264248f1-2110-4f59-a10f-19058d3db5ec.png"
+						alt="Cyberpad custom macropad project image"
+						loading="lazy"
+					/>
+				</a>
 				<p class="videos-subtext">
-					Shipwrecked: A four-day hackathon on a private island we organized last summer!
+					Cyberpad; A custom macropad made by @Kai Pereira and funded by Hackclub!
 				</p>
 			</div>
 		</div>
