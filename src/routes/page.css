@@ -76,49 +76,8 @@ body {
 	will-change: transform;
 }
 
-.logo .blob {
-	animation: blob-pulse 4s ease-in-out infinite;
-}
-
-.logo .glow {
-	animation: glow-fade 3s ease-in-out infinite;
-}
-
-.logo .dino {
-	animation: dino-bob 2.6s ease-in-out infinite;
-}
-
-.logo .rocket {
-	animation: rocket-float 2.2s ease-in-out infinite;
-}
-
 .logo:hover .rocket {
 	animation: rocket-launch 0.9s ease-in forwards;
-}
-
-.logo:hover .dino {
-	animation-duration: 0.6s;
-}
-
-@keyframes blob-pulse {
-	0%, 100% { transform: scale(1) rotate(0deg); }
-	50% { transform: scale(1.04) rotate(-1.5deg); }
-}
-
-@keyframes glow-fade {
-	0%, 100% { opacity: 0.6; transform: scale(1); }
-	50% { opacity: 1; transform: scale(1.06); }
-}
-
-@keyframes dino-bob {
-	0%, 100% { transform: translateY(0) rotate(0deg); }
-	50% { transform: translateY(-3%) rotate(1deg); }
-}
-
-@keyframes rocket-float {
-	0%, 100% { transform: translate(0, 0) rotate(0deg); }
-	25% { transform: translate(2%, -3%) rotate(3deg); }
-	75% { transform: translate(-1%, -1%) rotate(-2deg); }
 }
 
 @keyframes rocket-launch {
