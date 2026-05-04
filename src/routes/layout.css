@@ -42,26 +42,27 @@ html {
 }
 
 :root {
-	--color-bg: #1c1c1a;
-	--color-bg-card: #282828;
-	--color-bg-card-alt: #222034;
-	--color-text: #ffffff;
-	--color-text-secondary: #eeeeee;
-	--color-text-muted: #dddddd;
-	--color-text-dim: #c4c4c3;
-	--color-text-faint: #888888;
-	--color-accent: #ec3750;
-	--color-accent-dark: #c83430;
-	--color-accent-pink: #ff83fa;
-	--color-overlay-subtle: rgba(255, 255, 255, 0.05);
-	--color-overlay-light: rgba(255, 255, 255, 0.1);
-	--color-overlay-medium: rgba(255, 255, 255, 0.35);
-	--color-overlay-heavy: rgba(255, 255, 255, 0.6);
+	/* Hack Club palette */
+	--hc-red: #ec3750;
+	--hc-orange: #ff8c37;
+	--hc-yellow: #f1c40f;
+	--hc-green: #33d6a6;
+	--hc-cyan: #5bc0de;
+	--hc-blue: #338eda;
+	--hc-purple: #a633d6;
+	--hc-muted: #8492a6;
 
-	--font-display: 'Glyseric', 'Newsreader', 'Young Serif', 'PT Serif', Georgia, serif;
-	--font-serif: 'Young Serif', 'PT Serif', Georgia, serif;
+	--color-bg: #ffffff;
+	--color-text: #17171d;
+	--color-text-dim: #5a626f;
+	--color-text-faint: #8492a6;
+	--color-rule: #17171d;
+	--color-accent: var(--hc-red);
+
+	--font-display: 'Phantom Sans', 'Inter', system-ui, sans-serif;
+	--font-serif: 'Phantom Sans', 'Inter', system-ui, sans-serif;
 	--font-body: 'Phantom Sans', 'Inter', system-ui, sans-serif;
-	--font-mono: 'Anonymous Pro', monospace;
+	--font-mono: 'Anonymous Pro', ui-monospace, monospace;
 }
 
 body {

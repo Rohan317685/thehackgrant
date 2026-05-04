@@ -126,14 +126,14 @@
 		</p>
 		<p>
 			Enough about me. Let's talk about you, our future grant recipient. You'll build something at
-			the intersection of what you love and what the world needs. You'll tap into Hack Club's community
-			— game jams, hackathons, transit games (woot <a href="https://game.hackclub.com/"
+			the intersection of what you love and what the world needs. You'll tap into Hack Club's community:
+			game jams, hackathons, transit games (woot <a href="https://game.hackclub.com/"
 				>HCTG</a
 			>!). You'll see the pinnacle of teen building, the contraptions made at
 			<a href="https://blueprint.hackclub.com/prototype">hardware hackathons</a> and viral creations
 			made by Hack Clubbers (<a href="https://github.com/kavishdevar/librepods">librepods</a>,
 			anybody?). And with TheHackGrant, you'll have the resources to build something just as
-			impressive — with full creative agency.
+			impressive, with full creative agency.
 		</p>
 		<p>
 			Hack Club, to me, has been one of the most genuinely positively impactful things in my life,
